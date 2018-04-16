@@ -62,4 +62,26 @@ prompt: while 1 == 1 {
 // PROCESS
 // Now we have valid input that can be processed according to
 // the remaining requirements of the scenario
-print(validInput)
+for letter in validInput {
+    
+    //CHECK each letter to make sure it's IHOSZXN
+    
+    if letter == "I" || letter == "O" || letter == "H" || letter == "S" || letter == "N" || letter == "X" || letter == "Z" {
+        
+        //good - keep checking (continue loop)
+        continue
+        
+    }else {
+        //We know the word dpesn't work, so say NO and exit
+        print("NO")
+        exit(0) // QUIT THE PROGRAM
+        
+    }
+}
+
+//OUTPUT
+//if we got here, guaranteed this is a word with only acceptable letters
+print("YES")
+
+
+
